@@ -9,6 +9,7 @@ import {
     Easing,
     Platform
 } from 'react-native';
+import { Ionicons } from '@expo/vector-icons'
 import sortBy from 'sort-by';
 import { SearchBar } from 'react-native-elements'
 import { getDecks } from '../actions'
@@ -58,9 +59,12 @@ class Decks extends Component {
                 }}
                 underlayColor='#eeeeee'>
                 <View style={styles.listItem}>
-                    <View style={{ alignItems: 'center' }}>
+                    <View style={{ flex: 2, marginLeft: 10, alignItems: 'flex-start' }}>
                         <Animated.Text style={[styles.headerText, { fontSize: textSize }]}>{item.title}</Animated.Text>
                         <Text style={styles.mutedText}>{item.questions.length} cards</Text>
+                    </View>
+                    <View style={{flex: 1, alignItems: 'flex-end'}}>
+                        <Text><Ionicons name="ios-arrow-forward" color={primary} size={25} /></Text>
                     </View>
                 </View>
             </TouchableHighlight>
