@@ -13,7 +13,7 @@ import { Ionicons } from '@expo/vector-icons'
 import sortBy from 'sort-by';
 import { SearchBar } from 'react-native-elements'
 import { getDecks } from '../actions'
-import { primary, white } from '../utils/colors'
+import { primary, white, action } from '../utils/colors'
 import { styles } from '../utils/styles'
 import { fetchAllDecks } from '../utils/api'
 import { loadDecks } from '../utils/dispatches'
@@ -59,12 +59,12 @@ class Decks extends Component {
                 }}
                 underlayColor='#eeeeee'>
                 <View style={styles.listItem}>
-                    <View style={{ flex: 2, marginLeft: 10, alignItems: 'flex-start' }}>
+                    <View style={{ flex: 2, marginLeft: 20, alignItems: 'flex-start' }}>
                         <Animated.Text style={[styles.headerText, { fontSize: textSize }]}>{item.title}</Animated.Text>
                         <Text style={styles.mutedText}>{item.questions.length} cards</Text>
                     </View>
-                    <View style={{flex: 1, alignItems: 'flex-end'}}>
-                        <Text><Ionicons name="ios-arrow-forward" color={primary} size={25} /></Text>
+                    <View style={{flex: 1, marginRight: 20, alignItems: 'flex-end', justifyContent: 'center'}}>
+                        <Text><Ionicons name="ios-arrow-forward" color={primary} size={30} /></Text>
                     </View>
                 </View>
             </TouchableHighlight>
@@ -137,7 +137,7 @@ class Decks extends Component {
             refreshing: true
         },
         () => {
-            this.loadDecks()
+            loadDecks(this.props.dispatch)
             this.setState({ refreshing: false })
         })
     }
@@ -149,7 +149,7 @@ class Decks extends Component {
         const { decks } = this.props;
         return(
             <View style={{flex: 1, backgroundColor: white }}>
-               {(decks !== null && decks !== undefined && decks.length > 0)
+               {((decks !== null || decks !== undefined) && decks.length > 0)
                 ? <FlatList
                     data={decks.filter( (deck) => ~deck.title.toLowerCase().indexOf(this.state.filter.toLowerCase())).sort(sortBy('title'))}
                     style={{ flex: 1}}

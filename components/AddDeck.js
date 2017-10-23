@@ -40,7 +40,7 @@ class AddDeck extends Component {
                         style={[styles.input, (!this.state.valid) ? styles.errorInput : '']}
                         value={this.state.title}
                         onChangeText={(title) => this.setState({title})}
-                        placeholderTextColor={(!this.state.valid) ? danger : '#ddd'}
+                        placeholderTextColor={(!this.state.valid) ? danger : '#333'}
                         placeholder="Enter a deck title"
                     />
                 </View>

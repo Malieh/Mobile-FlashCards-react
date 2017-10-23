@@ -61,8 +61,8 @@ class DeckDetails extends Component {
         return (
             <View style={styles.container}>
                 <View style={{ flex: 1, alignItems: 'center' }}>
-                    <Text style={styles.largeHeaderText}>{deck.title}</Text>
-                    <Text style={styles.largeMutedText}>{deck.questions.length} cards</Text>
+                    <Text style={styles.headerText}>{deck.title}</Text>
+                    <Text style={styles.mutedText}>{deck.questions.length} cards</Text>
                 </View>
                 <View style={{ flex: 2, justifyContent: 'flex-start' }}>
                         <TouchableOpacity

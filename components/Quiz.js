@@ -60,7 +60,7 @@ class Quiz extends Component {
                 .then(setLocalNotification)
 
             Alert.alert(
-                'Score: ' + ((this.state.correct/questions.length)*100) + '%',
+                'Score: ' + Math.round((this.state.correct/questions.length)*100) + '%',
                 `You correctly answered ${this.state.correct} out of ${questions.length} questions.  Would you like to try again?`,
                 [
                     { text: 'Yes', onPress: () => {
