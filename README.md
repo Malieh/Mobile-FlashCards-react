@@ -6,7 +6,7 @@ Mobile Flash Cards is a React Native application that allows a user to create de
 ![Main Page](/screenshots/home.png)
 
 ### Setup
-- Clone this project (master branch) https://github.com/matthewpmurphy/udacity-udacicards.git
+- Clone this project (master branch) https://github.com/matthewpmurphy/udacity-mobile-flash-cards.git
 - open your terminal and navigate to project folder
 - if you do not have yarn installed, you may get it [here](https://yarnpkg.com/en/docs/install)
 - run `yawn install` to install all required dependencies
