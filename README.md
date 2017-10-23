@@ -9,3 +9,5 @@ Mobile Flashcards is a React Native application that allows a user to create dec
 - if you do not have yarn installed, you may get it [here](https://yarnpkg.com/en/docs/install)
 - run `yawn install` to install all required dependencies
 - run `yarn start`
+### Supported Handware
+- This app has been testing on a Pixel XL running Android 8.0.0 as well iOS 11 on a simulated Iphone 7 and Iphone 8.
