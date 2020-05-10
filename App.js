@@ -1,7 +1,6 @@
 import React from 'react';
 import {
   View,
-  Platform,
   StatusBar
 } from 'react-native';
 import { createStore } from 'redux'
@@ -48,10 +47,10 @@ const Tabs = TabNavigator({
   animationEnabled: true,
   lazy: true,
   tabBarOptions: {
-    activeTintColor: Platform.OS === 'ios' ? primary : white,
+    activeTintColor: 'primary',
     style: {
       height: 50,
-      backgroundColor: Platform.OS === 'ios' ? white : primary,
+      backgroundColor: 'primary',
       shadowColor: 'rgba(0, 0, 0, 0.24)',
       shadowOffset: {
         width: 0,
