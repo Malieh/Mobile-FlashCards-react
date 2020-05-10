@@ -11,11 +11,11 @@ import { Ionicons, MaterialCommunityIcons } from '@expo/vector-icons'
 import { primary, white } from './utils/colors'
 import { Constants } from 'expo'
 import { decks} from './reducers'
-import AddDeck from './components/AddDeck'
-import Decks from './components/Decks'
 import DeckDetails from './components/DeckDetails'
 import AddCard from './components/AddCard'
 import Quiz from './components/Quiz'
+import AddDeck from './components/AddDeck'
+import Decks from './components/Decks'
 import { setLocalNotification } from './utils/helpers'
 
 const AppStatusBar =  ({ backgroundColor, ...props}) =>{
