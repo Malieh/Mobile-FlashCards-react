@@ -47,10 +47,10 @@ const Tabs = TabNavigator({
   animationEnabled: true,
   lazy: true,
   tabBarOptions: {
-    activeTintColor: 'primary',
+    activeTintColor: primary,
     style: {
       height: 50,
-      backgroundColor: 'primary',
+      backgroundColor: primary,
       shadowColor: 'rgba(0, 0, 0, 0.24)',
       shadowOffset: {
         width: 0,
