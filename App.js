@@ -18,12 +18,7 @@ import AddCard from './components/AddCard'
 import Quiz from './components/Quiz'
 import { setLocalNotification } from './utils/helpers'
 
-/**
- * @description set up the status bar
- * @param { string } backgroundColor
- * @param { object } props
- */
-function AppStatusBar ({ backgroundColor, ...props}) {
+const AppStatusBar =  ({ backgroundColor, ...props}) =>{
   return (
     <View style={{ backgroundColor, height: Constants.statusBarHeight }}>
       <StatusBar translucent backgroundColor={backgroundColor} {...props} />
@@ -31,9 +26,6 @@ function AppStatusBar ({ backgroundColor, ...props}) {
   )
 }
 
-/**
- * @description setup tab navigation between the deck list view and the add deck view
- */
 const Tabs = TabNavigator({
   Decks: {
     screen: Decks,
@@ -71,9 +63,6 @@ const Tabs = TabNavigator({
   }
 })
 
-/**
- * @description set up the stack navigator to navigate from the deck list to deck details and from deck details to AddCard or Quiz
- */
 const MainNav = StackNavigator({
   Home: {
     screen: Tabs
@@ -101,14 +90,9 @@ const MainNav = StackNavigator({
 })
 
 export default class App extends React.Component {
-
   componentDidMount() {
     setLocalNotification()
   }
-
-  /**
-   * @description render the app
-   */
   render() {
     return (
       <Provider store={createStore(decks)}>

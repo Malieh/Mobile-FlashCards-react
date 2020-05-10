@@ -1,14 +1,15 @@
-Mobile Flashcards: a mobile app designed to help you study
+Udacity NanoDegree: Become a React developer
+
+Mobile Flashcards
 ===
 
 Mobile Flashcards is a React Native application that allows a user to create decks and add cards (questions and answers) to that deck.
 
 ### Setup
-- Clone this project (master branch) https://github.com/matthewpmurphy/udacity-mobile-flash-cards.git
+- Clone this project (master branch)
 - open your terminal and navigate to project folder
-- if you do not have yarn installed, you may get it [here](https://yarnpkg.com/en/docs/install)
-- run `yarn install` to install all required dependencies
-- run `yarn start`
+- run `npm install` to install all required dependencies
+- run `npm start`
 
 ### To view on your mobile device
 - Install [Expo](https://expo.io/)
